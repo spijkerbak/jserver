@@ -1,0 +1,5 @@
+// Certificaat
+//> openssl genrsa -out key.pem 2048
+//> openssl req -new -key key.pem -out csr.pem
+// >> Chalenge Password: Geheim123-Geheim456
+//> openssl x509 -req -in csr.pem -signkey key.pem -out cert.pem
