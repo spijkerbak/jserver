@@ -1,6 +1,9 @@
 import fs from 'fs'
 
-const config = {
+const webroot = 'B:/Frans/Documents/ontw/webroot'
+
+const config =
+{
     build: "2025.06.10.1",
 
     port: {
@@ -13,33 +16,34 @@ const config = {
         cert: fs.readFileSync('ssl/cert.pem')
     },
 
-    webroot: 'D:/Users/Tester/Documents/ontw/webroot',
+    webroot: webroot,
 
     // folders outside webroot subfolders
     special_folders: {
-        'common' : 'D:/Users/Tester/Documents/ontw/webroot/common',
-        'script' : 'D:/Users/Tester/Documents/ontw/webroot/script',
-        'img': 'D:/Users/Tester/Pictures',
-        'pictures': 'D:/Users/Tester/Pictures',
-        'videos': 'D:/Users/Tester/Videos',
-        'export': 'C:/export'
+        'common': webroot + '/common', 
+        'script': webroot + '/script', 
+        'site-js': webroot + '/site-js', 
     },
 
+
     api_folders: {
-        'api': 'D:/Users/Tester/Documents/ontw/webroot/api',
+        'api': webroot + '/api',
     },
 
     /* hostnames that need to be redirected to another hostname */
     redirect_hosts: {
-        '127.0.0.1': 'sissy',
-        'localhost': 'sissy',
-        'sissy.local': 'sissy',
+        // '127.0.0.1': 'sonny',
+        // 'localhost': 'sonny',
+        // 'berry.local': 'berry',
     },
 
     /* hosts and their corresponding folders in the webroot */
     known_hosts: {
-        'penny': 'sissy',
-        'sissy': 'sissy',
+        'sissy': 'systems',
+        'berry': 'berry',
+        'localhost': 'localhost',
+        'nb210986': 'nb210986',
+        'sonny': 'systems',
     }
 }
 
